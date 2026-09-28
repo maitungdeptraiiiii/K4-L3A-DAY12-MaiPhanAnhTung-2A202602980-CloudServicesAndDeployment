@@ -1,0 +1,19 @@
+# Chỉ dùng để thí nghiệm Câu 9 (scale ngang), KHÔNG dùng để deploy.
+#   docker compose -f docker-compose.yml -f docker-compose.scale.yml up -d --scale agent=3
+#
+# - agent: bỏ map cổng ra host (3 container không thể cùng chiếm cổng 8000)
+# - nginx: nhận cổng 8000 của host, chia request lần lượt cho 3 agent (round-robin)
+
+services:
+  agent:
+    ports: !reset []
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "8000:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      agent:
+        condition: service_healthy

@@ -12,7 +12,7 @@
 |-----|----------|
 | Họ và tên | Mai Phan Anh Tùng |
 | Mã học viên | 2A202602980 |
-| Repo | https://github.com/maitungdeptraiiiii/K4-L3A-MAIPHANANHTUNG-2A202602980-Cloud-Service-And-Deployment |
+| Repo | https://github.com/maitungdeptraiiiii/K4-L3A-DAY12-MaiPhanAnhTung-2A202602980-CloudServiceAndDeployment |
 
 ## Service
 
